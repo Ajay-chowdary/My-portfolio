@@ -1,0 +1,49 @@
+<svg viewBox="0 0 600 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Solo full-stack SaaS article cover">
+  <defs>
+    <radialGradient id="bg3" cx="50%" cy="42%" r="60%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.20"/>
+      <stop offset="50%" stop-color="#F59E0B" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="bd3" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#322B21"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="450" fill="#14110E"/>
+  <rect width="600" height="450" fill="url(#bd3)"/>
+  <rect width="600" height="450" fill="url(#bg3)"/>
+
+  <!-- full-stack layers (isometric stack) -->
+  <g transform="translate(300 230)">
+    <!-- bottom: database -->
+    <g transform="translate(0 70)">
+      <path d="M0 -34 L150 18 L0 70 L-150 18 Z" fill="#1C1813" stroke="#322B21" stroke-width="2"/>
+      <text x="0" y="22" text-anchor="middle" font-family="ui-monospace, monospace" font-size="15" fill="#A89D8C">data</text>
+    </g>
+    <!-- middle: backend (amber) -->
+    <g transform="translate(0 14)">
+      <path d="M0 -34 L150 18 L0 70 L-150 18 Z" fill="#F59E0B" fill-opacity="0.18" stroke="#F59E0B" stroke-width="2"/>
+      <text x="0" y="22" text-anchor="middle" font-family="ui-monospace, monospace" font-size="15" fill="#FBBF24">api</text>
+    </g>
+    <!-- top: frontend -->
+    <g transform="translate(0 -42)">
+      <path d="M0 -34 L150 18 L0 70 L-150 18 Z" fill="#242019" stroke="#FBBF24" stroke-width="2.5"/>
+      <text x="0" y="22" text-anchor="middle" font-family="ui-monospace, monospace" font-size="15" fill="#FAF7F2">ui</text>
+    </g>
+  </g>
+
+  <!-- small ticket accent (Tixoro) -->
+  <g transform="translate(452 96) rotate(10)">
+    <path d="M8 0 H92 a8 8 0 0 1 8 8 V22 a9 9 0 0 0 0 18 V54 a8 8 0 0 1 -8 8 H8 a8 8 0 0 1 -8 -8 V40 a9 9 0 0 0 0 -18 V8 A8 8 0 0 1 8 0 Z"
+      fill="#1C1813" stroke="#F59E0B" stroke-width="2"/>
+    <line x1="66" y1="6" x2="66" y2="56" stroke="#322B21" stroke-width="2" stroke-dasharray="2 6"/>
+    <rect x="12" y="18" width="40" height="7" rx="3.5" fill="#FBBF24" opacity="0.85"/>
+    <rect x="12" y="34" width="30" height="6" rx="3" fill="#A89D8C" opacity="0.5"/>
+    <g transform="translate(74 20)" fill="#FBBF24">
+      <rect x="0" y="0" width="6" height="6"/><rect x="10" y="0" width="6" height="6"/>
+      <rect x="0" y="10" width="6" height="6"/><rect x="10" y="10" width="6" height="6"/>
+    </g>
+  </g>
+
+  <text x="36" y="416" font-family="ui-monospace, monospace" font-size="16" fill="#A89D8C">// solo, end-to-end</text>
+</svg>

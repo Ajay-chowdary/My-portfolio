@@ -1,0 +1,49 @@
+<svg viewBox="0 0 600 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Agentic RAG article cover">
+  <defs>
+    <radialGradient id="bg1" cx="50%" cy="44%" r="60%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.22"/>
+      <stop offset="50%" stop-color="#F59E0B" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="bd1" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#322B21"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="450" fill="#14110E"/>
+  <rect width="600" height="450" fill="url(#bd1)"/>
+  <rect width="600" height="450" fill="url(#bg1)"/>
+
+  <!-- concentric retrieval rings -->
+  <g fill="none" stroke="#F59E0B">
+    <circle cx="300" cy="210" r="150" stroke-opacity="0.12" stroke-width="2"/>
+    <circle cx="300" cy="210" r="108" stroke-opacity="0.2" stroke-width="2"/>
+    <circle cx="300" cy="210" r="66" stroke-opacity="0.35" stroke-width="2"/>
+  </g>
+
+  <!-- floating document chips -->
+  <g>
+    <g transform="translate(150 110) rotate(-10)">
+      <rect width="86" height="60" rx="8" fill="#1C1813" stroke="#322B21" stroke-width="2"/>
+      <rect x="12" y="14" width="50" height="7" rx="3.5" fill="#A89D8C" opacity="0.6"/>
+      <rect x="12" y="30" width="62" height="6" rx="3" fill="#A89D8C" opacity="0.4"/>
+      <rect x="12" y="44" width="40" height="6" rx="3" fill="#A89D8C" opacity="0.4"/>
+    </g>
+    <g transform="translate(380 100) rotate(8)">
+      <rect width="86" height="60" rx="8" fill="#1C1813" stroke="#322B21" stroke-width="2"/>
+      <rect x="12" y="14" width="44" height="7" rx="3.5" fill="#FBBF24" opacity="0.8"/>
+      <rect x="12" y="30" width="62" height="6" rx="3" fill="#A89D8C" opacity="0.4"/>
+      <rect x="12" y="44" width="52" height="6" rx="3" fill="#A89D8C" opacity="0.4"/>
+    </g>
+    <g transform="translate(390 280) rotate(-6)">
+      <rect width="86" height="60" rx="8" fill="#1C1813" stroke="#322B21" stroke-width="2"/>
+      <rect x="12" y="14" width="50" height="7" rx="3.5" fill="#A89D8C" opacity="0.6"/>
+      <rect x="12" y="30" width="40" height="6" rx="3" fill="#A89D8C" opacity="0.4"/>
+    </g>
+  </g>
+
+  <!-- center glowing node with check -->
+  <circle cx="300" cy="210" r="40" fill="#F59E0B"/>
+  <path d="M283 210l11 11 23-25" fill="none" stroke="#14110E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="36" y="416" font-family="ui-monospace, monospace" font-size="16" fill="#A89D8C">// agentic rag</text>
+</svg>

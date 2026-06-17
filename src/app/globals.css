@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+/*
+  Ajay Chowdary — Portfolio
+  Theme: "Amber on Warm Charcoal"
+  ------------------------------------------------------------------
+  bg        #14110E  warm near-black
+  surface   #1C1813  raised panels
+  surface2  #242019  cards
+  line      #322B21  hairline borders
+  text      #FAF7F2  primary
+  muted     #A89D8C  secondary
+  amber     #F59E0B  accent (CTA, highlights)
+  amber-hi  #FBBF24  bright accent / glow
+  amber-lo  #B45309  deep accent
+*/
+
+@theme {
+  --color-bg: #14110e;
+  --color-surface: #1c1813;
+  --color-surface2: #242019;
+  --color-line: #322b21;
+  --color-text: #faf7f2;
+  --color-muted: #a89d8c;
+  --color-amber: #f59e0b;
+  --color-amber-hi: #fbbf24;
+  --color-amber-lo: #b45309;
+
+  /* shadcn/ui tokens (mapped onto the warm-charcoal palette) */
+  --color-border: #322b21;
+  --color-input: #322b21;
+  --color-ring: #f59e0b;
+  --color-card: #1c1813;
+  --color-card-foreground: #faf7f2;
+  --color-muted-foreground: #a89d8c;
+
+  /* Spotlight sweep animation (used by ui/spotlight.tsx) */
+  --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
+
+  --font-display: var(--font-bricolage);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains);
+}
+
+/* shadcn relies on a sensible default border color */
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base color lives on <html> so a fixed -z-1 background layer
+   (e.g. <DottedSurface />) renders above it but behind page content. */
+html {
+  background-color: var(--color-bg);
+}
+
+body {
+  background-color: transparent;
+  color: var(--color-text);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* The provided component uses `-z-1`, which isn't a default Tailwind v4
+   utility; define it so the dot layer sits just behind content. */
+.-z-1 {
+  z-index: -1;
+}
+
+/* Subtle film-grain-free amber vignette helper */
+.glow-amber {
+  background: radial-gradient(
+    60% 50% at 50% 40%,
+    rgba(245, 158, 11, 0.18) 0%,
+    rgba(245, 158, 11, 0.06) 35%,
+    transparent 70%
+  );
+}
+
+/* Selection */
+::selection {
+  background: var(--color-amber);
+  color: #14110e;
+}
+
+/* Focus visibility for keyboard users */
+:where(a, button, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-amber-hi);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Scroll reveal primitive */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Hero entrance */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.animate-rise {
+  animation: rise-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes scroll-bob {
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50% { transform: translateY(8px); opacity: 1; }
+}
+.animate-scroll-bob {
+  animation: scroll-bob 1.8s ease-in-out infinite;
+}
+
+/* Spotlight sweep (ui/spotlight.tsx) */
+@keyframes spotlight {
+  0% {
+    opacity: 0;
+    transform: translate(-72%, -62%) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -40%) scale(1);
+  }
+}
+
+/* Loading spinner shown while the Spline scene streams in */
+.loader {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid var(--color-line);
+  border-top-color: var(--color-amber);
+  animation: loader-spin 0.8s linear infinite;
+}
+@keyframes loader-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .animate-rise,
+  .animate-scroll-bob { animation: none; }
+  .loader { animation-duration: 1.6s; }
+}

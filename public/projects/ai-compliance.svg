@@ -1,0 +1,56 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI Compliance Analyst cover">
+  <defs>
+    <radialGradient id="g1" cx="50%" cy="38%" r="62%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.22"/>
+      <stop offset="45%" stop-color="#F59E0B" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots1" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#322B21"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="500" fill="#14110E"/>
+  <rect width="800" height="500" fill="url(#dots1)"/>
+  <rect width="800" height="500" fill="url(#g1)"/>
+
+  <!-- document -->
+  <g transform="translate(150 120)">
+    <rect x="0" y="0" width="250" height="300" rx="14" fill="#1C1813" stroke="#322B21" stroke-width="2"/>
+    <rect x="28" y="34" width="150" height="12" rx="6" fill="#FAF7F2" opacity="0.85"/>
+    <rect x="28" y="74" width="194" height="8" rx="4" fill="#A89D8C" opacity="0.5"/>
+    <rect x="28" y="96" width="180" height="8" rx="4" fill="#A89D8C" opacity="0.5"/>
+    <!-- highlighted, cited line -->
+    <rect x="20" y="128" width="210" height="34" rx="8" fill="#F59E0B" opacity="0.14"/>
+    <rect x="28" y="140" width="150" height="10" rx="5" fill="#FBBF24"/>
+    <circle cx="206" cy="145" r="11" fill="none" stroke="#FBBF24" stroke-width="2.5"/>
+    <path d="M201 145l4 4 7-8" fill="none" stroke="#FBBF24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="28" y="186" width="194" height="8" rx="4" fill="#A89D8C" opacity="0.5"/>
+    <rect x="28" y="208" width="160" height="8" rx="4" fill="#A89D8C" opacity="0.5"/>
+    <rect x="28" y="244" width="194" height="8" rx="4" fill="#A89D8C" opacity="0.35"/>
+    <rect x="28" y="266" width="120" height="8" rx="4" fill="#A89D8C" opacity="0.35"/>
+  </g>
+
+  <!-- retrieval node cluster + connections -->
+  <g stroke="#F59E0B" stroke-width="2" opacity="0.9">
+    <line x1="400" y1="230" x2="520" y2="150" opacity="0.5"/>
+    <line x1="400" y1="270" x2="540" y2="300" opacity="0.5"/>
+    <line x1="520" y1="150" x2="620" y2="210" opacity="0.5"/>
+    <line x1="540" y1="300" x2="620" y2="210" opacity="0.5"/>
+    <line x1="620" y1="210" x2="660" y2="120" opacity="0.5"/>
+  </g>
+  <g>
+    <circle cx="520" cy="150" r="13" fill="#1C1813" stroke="#FBBF24" stroke-width="2.5"/>
+    <circle cx="540" cy="300" r="11" fill="#1C1813" stroke="#F59E0B" stroke-width="2.5"/>
+    <circle cx="620" cy="210" r="18" fill="#F59E0B"/>
+    <circle cx="660" cy="120" r="9" fill="#1C1813" stroke="#A89D8C" stroke-width="2"/>
+  </g>
+
+  <!-- magnifier -->
+  <g transform="translate(560 360)">
+    <circle cx="0" cy="0" r="34" fill="none" stroke="#FBBF24" stroke-width="4"/>
+    <line x1="24" y1="24" x2="52" y2="52" stroke="#FBBF24" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <text x="48" y="464" font-family="ui-monospace, monospace" font-size="18" fill="#A89D8C">&lt;agentic-rag /&gt;</text>
+</svg>

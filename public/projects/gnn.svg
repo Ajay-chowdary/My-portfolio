@@ -1,0 +1,57 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Graph Neural Network cover">
+  <defs>
+    <radialGradient id="g3" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.20"/>
+      <stop offset="45%" stop-color="#F59E0B" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots3" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#322B21"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="500" fill="#14110E"/>
+  <rect width="800" height="500" fill="url(#dots3)"/>
+  <rect width="800" height="500" fill="url(#g3)"/>
+
+  <!-- muted edges -->
+  <g stroke="#322B21" stroke-width="2">
+    <line x1="160" y1="150" x2="300" y2="120"/>
+    <line x1="160" y1="150" x2="220" y2="300"/>
+    <line x1="300" y1="120" x2="430" y2="230"/>
+    <line x1="220" y1="300" x2="380" y2="380"/>
+    <line x1="430" y1="230" x2="380" y2="380"/>
+    <line x1="430" y1="230" x2="560" y2="150"/>
+    <line x1="560" y1="150" x2="660" y2="270"/>
+    <line x1="380" y1="380" x2="560" y2="360"/>
+    <line x1="560" y1="360" x2="660" y2="270"/>
+    <line x1="560" y1="150" x2="620" y2="380"/>
+  </g>
+
+  <!-- highlighted path (amber) -->
+  <g stroke="#F59E0B" stroke-width="3.5" stroke-linecap="round">
+    <line x1="160" y1="150" x2="300" y2="120"/>
+    <line x1="300" y1="120" x2="430" y2="230"/>
+    <line x1="430" y1="230" x2="560" y2="150"/>
+    <line x1="560" y1="150" x2="660" y2="270"/>
+  </g>
+
+  <!-- muted nodes -->
+  <g fill="#1C1813" stroke="#A89D8C" stroke-width="2">
+    <circle cx="220" cy="300" r="14"/>
+    <circle cx="380" cy="380" r="16"/>
+    <circle cx="560" cy="360" r="13"/>
+    <circle cx="620" cy="380" r="11"/>
+  </g>
+
+  <!-- highlighted nodes -->
+  <g>
+    <circle cx="160" cy="150" r="15" fill="#1C1813" stroke="#FBBF24" stroke-width="3"/>
+    <circle cx="300" cy="120" r="17" fill="#F59E0B"/>
+    <circle cx="430" cy="230" r="22" fill="#FBBF24"/>
+    <circle cx="560" cy="150" r="17" fill="#F59E0B"/>
+    <circle cx="660" cy="270" r="14" fill="#1C1813" stroke="#FBBF24" stroke-width="3"/>
+  </g>
+
+  <text x="48" y="464" font-family="ui-monospace, monospace" font-size="18" fill="#A89D8C">&lt;graph-net /&gt;</text>
+</svg>
