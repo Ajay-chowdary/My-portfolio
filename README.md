@@ -4,7 +4,7 @@ Personal portfolio of **Ajay Chowdary Dodda**, an AI Engineer & Full Stack Devel
 Built with Next.js, TypeScript, and Tailwind CSS, with a custom amber-on-charcoal
 design system and a handful of interactive, GPU-accelerated touches.
 
-> **Live:** [my-portfolio-nine-delta-13.vercel.app](https://my-portfolio-nine-delta-13.vercel.app)
+> **Live:** [ajaychowdary.dev](https://ajaychowdary.dev)
 
 ## Features
 
