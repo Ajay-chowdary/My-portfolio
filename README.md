@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ajay Chowdary Dodda — Portfolio
+
+Personal portfolio of **Ajay Chowdary Dodda**, an AI Engineer & Full Stack Developer.
+Built with Next.js, TypeScript, and Tailwind CSS, with a custom amber-on-charcoal
+design system and a handful of interactive, GPU-accelerated touches.
+
+> **Live:** _add your Vercel URL here once deployed_
+
+## Features
+
+- **Animated hero gallery** — cycle through photos, click to zoom a photo over the title
+- **Interactive 3D** — a live Spline scene
+- **Ambient WebGL backgrounds** — an animated dotted-surface wave and a gooey cursor trail
+- **Project detail modals** — README-style overview, feature list, tech, and links
+- **Writing section** — full articles in a focused reading modal
+- **Skills, experience timeline, and contact** — all data-driven and easy to edit
+- Responsive, keyboard-accessible, and `prefers-reduced-motion` aware
+
+## Tech Stack
+
+| Area | Tools |
+| --- | --- |
+| Framework | Next.js 16 (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS v4 |
+| 3D / Motion | Three.js, Spline, Framer Motion |
+| Fonts | Bricolage Grotesque, Inter, JetBrains Mono |
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view it.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev      # start the dev server
+npm run build    # production build
+npm run start    # serve the production build
+npm run lint     # lint
+```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+  app/            # App Router entry, layout, global styles, 404
+  components/     # Hero, Projects, Blog, About, Nav, Contact, …
+    ui/           # reusable UI (modal, cards, spline, effects)
+  data/           # content: projects, posts, skills, experience
+public/
+  projects/       # project cover art (SVG)
+  blog/           # article cover art (SVG)
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To update content, edit the files in `src/data/` — no component changes needed.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+Deployed on [Vercel](https://vercel.com). Every push to `main` triggers an
+automatic production deploy.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contact
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Email: ajaycdodda@gmail.com
+- LinkedIn: [ajaychowdarydodda](https://www.linkedin.com/in/ajaychowdarydodda/)
+- GitHub: [Ajay-chowdary](https://github.com/Ajay-chowdary)
